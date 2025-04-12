@@ -13,7 +13,7 @@
         </li>
       </ul>
       <input v-model="newThreadName" type="text" class="form-control mb-3" placeholder="New Thread Name" />
-      <button class="btn btn-success" @click="create">+ New Thread</button>
+      <button class="btn btn-success" @click="create" :disabled="!newThreadName">+ New Thread</button>
   
       <ChatBox v-if="selectedId" :thread-id="selectedId" :thread-name="selectedName" />
     </div>
